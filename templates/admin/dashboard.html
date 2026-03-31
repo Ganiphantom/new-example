@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School ERP Dashboard — Basic HTML</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+    body{background:#f4f6f9;color:#1f2937}
+    .app{display:flex;min-height:100vh}
+    aside{width:240px;background:#0f172a;color:#fff;padding:20px}
+    aside h2{margin-bottom:15px;font-size:20px}
+    aside ul{list-style:none;margin-top:15px}
+    aside ul li{margin:8px 0}
+    aside ul li a{color:#cbd5e1;text-decoration:none;padding:8px 10px;display:block;border-radius:6px}
+    aside ul li a:hover,aside ul li a.active{background:#1e293b;color:#fff}
+
+    header{height:60px;background:#fff;border-bottom:1px solid #e5e7eb;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+    .content{flex:1;padding:20px}
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px;margin-top:20px}
+    .card{background:#fff;padding:15px;border-radius:10px;border:1px solid #e5e7eb}
+    .col-3{grid-column:span 3}
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .stat-title{font-size:14px;color:#6b7280}
+    .stat-value{font-size:22px;font-weight:bold;margin-top:5px}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <h2>School ERP</h2>
+      <ul>
+        <li><a href="#" class="active">🏫 Dashboard</a></li>
+        <li><a href="#">👨‍🏫 Teachers</a></li>
+        <li><a href="#">🎓 Students</a></li>
+        <li><a href="#">📘 Classes</a></li>
+        <li><a href="#">📝 Exams</a></li>
+        <li><a href="#">💳 Fees</a></li>
+        <li><a href="#">📢 Announcements</a></li>
+        <li><a href="#">⚙ Settings</a></li>
+      </ul>
+    </aside>
+
+    <div style="flex:1;display:flex;flex-direction:column;min-height:100vh">
+      <header>
+        <h3>Dashboard Overview</h3>
+        <div>Admin | school@example.com</div>
+      </header>
+
+      <main class="content">
+        <div class="grid">
+          <div class="card col-3">
+            <div class="stat-title">Total Students</div>
+            <div class="stat-value">1,250</div>
+          </div>
+
+          <div class="card col-3">
+            <div class="stat-title">Total Teachers</div>
+            <div class="stat-value">68</div>
+          </div>
+
+          <div class="card col-3">
+            <div class="stat-title">Classes Running</div>
+            <div class="stat-value">42</div>
+          </div>
+
+          <div class="card col-3">
+            <div class="stat-title">Pending Fees</div>
+            <div class="stat-value">₹ 4,32,500</div>
+          </div>
+
+          <div class="card col-6">
+            <h3>Recent Admissions</h3>
+            <table style="width:100%;margin-top:10px;border-collapse:collapse">
+              <tr style="background:#f1f5f9">
+                <th style="padding:8px;text-align:left">Name</th>
+                <th style="padding:8px;text-align:left">Class</th>
+                <th style="padding:8px;text-align:left">Date</th>
+              </tr>
+              <tr><td style="padding:8px">Rahul</td><td style="padding:8px">8th</td><td style="padding:8px">12 Nov</td></tr>
+              <tr><td style="padding:8px">Anjali</td><td style="padding:8px">6th</td><td style="padding:8px">11 Nov</td></tr>
+              <tr><td style="padding:8px">Farhan</td><td style="padding:8px">9th</td><td style="padding:8px">10 Nov</td></tr>
+            </table>
+          </div>
+
+          <div class="card col-6">
+            <h3>Upcoming Exams</h3>
+            <ul style="margin-top:10px;list-style:none;line-height:1.8">
+              <li>📘 Class 10 — Science — 18 Nov</li>
+              <li>📕 Class 7 — English — 19 Nov</li>
+              <li>📗 Class 12 — Maths — 20 Nov</li>
+              <li>📙 Class 9 — Social — 21 Nov</li>
+            </ul>
+          </div>
+
+          <div class="card col-12">
+            <h3>Fee Defaulters</h3>
+            <table style="width:100%;margin-top:10px;border-collapse:collapse">
+              <tr style="background:#f1f5f9">
+                <th style="padding:8px;text-align:left">Student</th>
+                <th style="padding:8px;text-align:left">Class</th>
+                <th style="padding:8px;text-align:left">Amount</th>
+                <th style="padding:8px;text-align:left">Action</th>
+              </tr>
+              <tr>
+                <td style="padding:8px">Vikas</td>
+                <td style="padding:8px">10th</td>
+                <td style="padding:8px">₹ 12,000</td>
+                <td style="padding:8px"><button style="padding:6px 10px">Send Reminder</button></td>
+              </tr>
+              <tr>
+                <td style="padding:8px">Meera</td>
+                <td style="padding:8px">7th</td>
+                <td style="padding:8px">₹ 7,500</td>
+                <td style="padding:8px"><button style="padding:6px 10px">Send Reminder</button></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
